@@ -5,7 +5,7 @@ The app fetches data from https://fetch-hiring.s3.amazonaws.com/hiring.json, fil
 ## Requirements
 - Fetch data from a remote API.
 - Filter out items with blank or null names.
-- Group items by `listId`.
+- Group items by `listId`. (Also added filtering by group, select groups to show)
 - Sort items by `listId` and `name`.
 - Display the final result in a scrollable list.
 
@@ -16,32 +16,35 @@ The project follows the MVVM (Model-View-ViewModel) architecture and uses Jetpac
 
 ```
 src/
-├── data/
-│   ├── api/
-│   │   ├── ApiService.kt        // Retrofit API interface
-│   │   ├── ApiClient.kt         // Retrofit client configuration
-│   ├── model/
-│   │   ├── Item.kt              // Data model for API response
-│   ├── repository/
-│       ├── ItemRepository.kt    // Repository to manage data fetching and filtering
-│
-├── di/
-│   ├── AppModule.kt             // Dependency injection setup with Hilt
-│
-├── ui/
-│   ├── theme/
-│   │   ├── Theme.kt             // App-wide theme settings
-│   │   ├── Color.kt             // App colors
-│   │   ├── Typography.kt        // Typography settings
-│   ├── components/
-│   │   ├── ItemCard.kt          // Reusable composable to display an item
-│   ├── screens/
-│       ├── ItemListScreen.kt    // Screen to display the list of items
-│       ├── ItemListViewModel.kt // ViewModel for the ItemListScreen
-│
-│
-├── MainActivity.kt              // Entry point of the app
-├── FetchApplication.kt          // Custom Application class for Hilt
+├── main/java/com/anbapps/fetchrewardscodingexercise/
+   ├── data/
+   │   ├── api/
+   │   │   ├── ApiService.kt        // Retrofit API interface
+   │   │   ├── ApiClient.kt         // Retrofit client configuration
+   │   ├── model/
+   │   │   ├── Item.kt              // Data model for API response
+   │   ├── repository/
+   │       ├── ItemRepository.kt    // Repository to manage data fetching and filtering
+   │
+   ├── di/
+   │   ├── AppModule.kt             // Dependency injection setup with Hilt
+   │
+   ├── ui/
+   │   ├── theme/
+   │   │   ├── Theme.kt             // App-wide theme settings
+   │   │   ├── Color.kt             // App colors
+   │   │   ├── Typography.kt        // Typography settings
+   │   ├── components/
+   │   │   ├── ItemCard.kt          // Reusable composable to display an item
+   │   ├── screens/
+   │       ├── ItemListScreen.kt    // Screen to display the list of items
+   │       ├── ItemListViewModel.kt // ViewModel for the ItemListScreen
+   │
+   │
+   ├── MainActivity.kt              // Entry point of the app
+   ├── FetchApplication.kt          // Custom Application class for Hilt
+├──test/java/com/anbapps/fetchrewardscodingexercise
+   ├──RepositoryTest.kt             //Unit test to verify data filtering logic is working as expected
 ```
 
 ---
