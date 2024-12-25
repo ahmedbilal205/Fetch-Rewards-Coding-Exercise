@@ -71,4 +71,8 @@ dependencies {
     kapt(libs.androidx.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
 
+    //mockk
+    testImplementation(libs.mockk)
+    testImplementation(libs.kotlinx.coroutines.test)
+
 }

@@ -7,7 +7,7 @@ object ApiClient {
     // Configures the Retrofit instance to interact with the API
     val apiService: ApiService by lazy {
         Retrofit.Builder()
-            .baseUrl("https://fetch-hiring.s3.amazonaws.com/") //TODO abstract away
+            .baseUrl("https://fetch-hiring.s3.amazonaws.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiService::class.java)

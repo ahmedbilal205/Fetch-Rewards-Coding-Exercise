@@ -14,7 +14,7 @@ fun ItemListScreen(viewModel: ItemListViewModel = hiltViewModel()) {
 
     LazyColumn {
         items(items) { item ->
-            ItemCard(item = item)
+            ItemCard(item = item){}
         }
     }
 }

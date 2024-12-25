@@ -1,5 +1,11 @@
 package com.anbapps.fetchrewardscodingexercise
 
+import com.anbapps.fetchrewardscodingexercise.data.model.Item
+import com.anbapps.fetchrewardscodingexercise.data.remote.ApiService
+import com.anbapps.fetchrewardscodingexercise.data.repository.ItemRepository
+import io.mockk.coEvery
+import io.mockk.mockk
+import kotlinx.coroutines.test.runTest
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -14,4 +20,5 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+
 }
