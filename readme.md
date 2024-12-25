@@ -58,7 +58,7 @@ src/
 - **Coroutines**: For asynchronous programming - fetching data asynchronously.
 
 ---
-!["App Screenshot"](App%20Screenshot.jpg)
+<img src="App%20Screenshot.jpg" width="300" >
 
 
 ## How to Run the Project
